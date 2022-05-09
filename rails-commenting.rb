@@ -6,19 +6,19 @@
 
 # FILE: app/controller/blog_posts_controller.rb
 
-# ---1) 
+# ---1) The code below shows the model name
 class BlogPostsController < ApplicationController
   def index
-    # ---2)
+    # ---2) The code below is an instance variable. The instance variable is assigned as the model's information/database.
     @posts = BlogPost.all
   end
 
-  # ---3)
+  # ---3) The code below is the show method. It is the second step in the CRUD actions. 
   def show
     @post = BlogPost.find(params[:id])
   end
 
-  # ---4)
+  # ---4) 
   def new
     @post = BlogPost.new
   end
@@ -59,7 +59,7 @@ class BlogPostsController < ApplicationController
     end
   end
 
-  # ---9)
+  # ---9) The code below is making the code following private, meaning it will not be seen or related in any way to be visible or changed. 
   private
   def blog_post_params
     # ---10)

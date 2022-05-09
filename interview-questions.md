@@ -7,7 +7,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. As a developer, I am creating a Rails application with a model called Cohort that has_many students, but OOPS! I forgot to add the foreign key. How can I fix this mistake? What is the name of the foreign key? Would the foreign key be on the Cohort model or the Student model?
 
-  Your answer:
+  Your answer: To fix this mistake, on the Cohort model in Active Records the has-many will be added including at the end the name of the model to be connected. Then you will need to go to the child model, add under the Active Record belongs_to including the parent model at the end. This is going to link the models. 
 
   Researched answer:
 
@@ -15,7 +15,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 2. Which RESTful routes must always be passed params? Why?
 
-  Your answer:
+  Your answer: 
 
   Researched answer:
 
@@ -23,7 +23,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 3. Name three rails generator commands. What is created by each?
 
-  Your answer:
+  Your answer: Three rails generator commands are: $ rails g model ModeName, $ rails g controller ModeName, $ rails 
 
   Researched answer:
 
@@ -31,18 +31,25 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
+Controller Action: Index
 action: "GET"    location: /students          
 
+Controller Action: Create 
 action: "POST"   location: /students       
 
+Controller Action: New
 action: "GET"    location: /students/new
 
+Controller Action: Show
 action: "GET"    location: /students/2  
 
+Controller Action: Edit
 action: "GET"    location: /students/2/edit    
 
+Controller Action: Update
 action: "PATCH"  location: /students/2      
 
+Controller Action: Destroy, this action removes all existing data related to the model
 action: "DELETE" location: /students/2      
 
 
