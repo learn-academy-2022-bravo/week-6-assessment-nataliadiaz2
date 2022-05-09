@@ -17,7 +17,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: The RESTful routes that need params are create and edit. Those two RESTful routes are creating new information that will be inputted in the database. They need params to relay that new information. 
 
-  Researched answer: 
+  Researched answer: There are RESTful routes that require params in the method to reference or update a piece of information in the database. The routes are: show, create, edit, update, update, and destroy. These routes need to be passed params to know what data to pull from the database whether that be all the data, a specific piece, or new data being inputted. Without this, there would not be a pathway to the data. 
 
 
 
@@ -58,22 +58,27 @@ action: "DELETE" location: /students/2
 
 User Stories: 
 
-1. 
+1. Create a new rails application called 'to_do_list'. CD into the application after creation. 
+Terminal should look like: $ $ rails new to_do_list -d postgresql -T
+  $ cd to_do_list_app
 
-2. 
+2. Create the database for this application. 
+Terminal should look like: $ rails db:create
 
-3. 
+3. Generate a model called List with a short_term and long_term section. The fields should be strings. 
+Terminal: $ rails generate model List short_term:string long_term:string
 
-4. 
+4. Run the migration of this information to setup the database
+Terminal: $ rails db:create
 
-5. 
+5. Inside your terminal enter the rails console. Add two goals inside the short_term section. Add two goals for the long_term goals. 
 
-6. 
+6. Retrieve all short_term goals. Add a third short_term goal. 
 
-7. 
+7. Update the second long_term goal to finishing a specific task. 
 
-8. 
+8. Add another section called due_date, update both short_term and long_term goals with dates. Make the first two short_term dates the same. 
 
-9. 
+9. Retrieve the short_term data with the same due_dates. 
 
-10. 
+10. Remove the first short_term item. 
